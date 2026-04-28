@@ -10,7 +10,7 @@
       with your actual key (starts with AIzaSy...)
    ═══════════════════════════════════════════════ */
 
-const GB_API_KEY = "YOUR_GEMINI_API_KEY_HERE";
+const GB_API_KEY = "AIzaSyAYJ7jCjigXjSwzWEf3m3N9Wlke0ds3rMs";
 const GB_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GB_API_KEY}`;
 
 const GB_SYSTEM = `You are GogBot, the intelligent AI assistant embedded on George Ndung'u's professional portfolio website (https://georges-lab.github.io/). Your job is to represent George professionally, answer visitor questions intelligently, qualify leads, and guide interested clients toward contacting George.
