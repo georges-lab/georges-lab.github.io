@@ -1105,9 +1105,6 @@ input[type='checkbox'] {
         text-align: center;
     }
 
-/* --- TARGETING SMALL MOBILE DEVICES (500px and below) --- */
-@media screen and (max-width: 500px) {
-    
     /* 1. Center the Home Buttons */
     .home__btns {
         display: flex !important;
@@ -1116,64 +1113,35 @@ input[type='checkbox'] {
         align-items: center !important;
         width: 100% !important;
         gap: 15px !important;
-        margin-top: 2rem !important; /* Adds space above the buttons if needed */
+        margin-top: 2rem !important;
     }
-
-    /* 2. Center and Lift the About Image */
-    .about__img-wrapper {
-        display: flex !important;
-        justify-content: center !important;
-        margin-top: -60px !important; /* Pulls image up further on small screens */
-        margin-bottom: 30px !important; /* Space between image and text */
-        width: 100% !important;
-    }
-
-    /* 3. Ensure the Image inside centers perfectly */
-    .about__img-wrapper img {
-        margin: 0 auto !important;
-        display: block !important;
-        width: 250px !important; /* Or whatever size looks best on your phone */
-        height: auto !important;
-    }
-}
-    
-    
-    .home__btns {
-        display: flex;
-        justify-content: center; /* Centers horizontally */
-        align-items: center;
-        gap: 15px;               /* Adds space between the buttons */
-        width: 100%;             /* Ensures it spans the full width to allow centering */
-    }
-
-
 
     .home__img-wrapper {
         display: flex;
         justify-content: center;
     }
 
+    /* 2. Center and Lift the About Image */
     .about__img-wrapper {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: -30px;    /* Pulls the image upward */
-        margin-bottom: 20px;  /* Adds space below the image so it doesn't crowd text */
-        text-align: center;   /* Ensures any inline elements inside are also centered */
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: -60px !important; /* The lift you wanted */
+        margin-bottom: 30px !important; 
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .about__img-wrapper img {
+        margin: 0 auto !important;
+        display: block !important;
+        width: 250px !important;
+        height: auto !important;
     }
 
     .about__social-link {
         justify-content: center;
         column-gap: 1rem;
-    }
-
-
-    .services__container,
-    .skills__container,
-    .work__container,
-    .testimonials__container,
-    .contact__container {
-        grid-template-columns: 1fr;
     }
 
     .contact__item {
@@ -1194,13 +1162,13 @@ input[type='checkbox'] {
     .footer__social-link {
         color: var(--first-color);
     }
-}
+} /* <--- This bracket closes the 576px media query correctly */
+
+
 
 /* ═══════════════════════════════════════════════
-   GOGBOT — FIXED CSS
-   Paste this inside a <style> tag in your
-   index.html <head> section. Using !important
-   to prevent your existing CSS from overriding.
+   GOGBOT — CSS
+  
    ═══════════════════════════════════════════════ */
 
 /* ── Floating Button ── */
