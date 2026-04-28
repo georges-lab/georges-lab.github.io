@@ -1,4 +1,4 @@
-/*===========google fonts===========*/
+no/*===========google fonts===========*/
 
 
 /*==========variable css============*/
@@ -358,10 +358,9 @@ input[type='checkbox'] {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    .home__container{
-width:100%;
-max-width:1000px;
-}
+    width:100%;
+    max-width:1000px;
+    margin:auto;
 }
 
 .home__small {
@@ -376,6 +375,9 @@ max-width:1000px;
     position: relative;
     vertical-align: middle;
     background-color: rgb(0, 255, 213);
+    width:100%;
+    max-width:320px;
+    height:auto;
 }
 
 
@@ -497,10 +499,9 @@ max-width:1000px;
 
 .about__img-wrapper{
     position:relative;
-    margin:0 auto;
-    width:100%;
-    max-width:320px;
-    height:320px;
+    margin:0 auto 2rem auto;
+    width:260px;
+    height:260px;
 }
 
 
@@ -1089,11 +1090,16 @@ max-width:1000px;
 
 @media screen and (max-width:576px){
 
-.home__container{
-width:100% !important;
-max-width:100% !important;
+.home__container,
+.about__container{
 grid-template-columns:1fr !important;
+width:100% !important;
 text-align:center !important;
+justify-items:center !important;
+}
+
+.home__content{
+text-align:center;
 }
 
 .home__btns{
@@ -1105,22 +1111,22 @@ gap:12px !important;
 width:100% !important;
 }
 
-.about__container{
-display:grid !important;
-grid-template-columns:1fr !important;
-text-align:center !important;
-justify-items:center !important;
+.home__img{
+width:100% !important;
+max-width:280px !important;
+height:auto !important;
 }
 
 .about__img-wrapper{
-margin:0 auto 2rem auto !important;
 width:260px !important;
 height:260px !important;
+margin:0 auto 2rem auto !important;
 }
 
-.about__img{
-max-width:100% !important;
-height:auto !important;
+.about__bottom{
+flex-direction:column !important;
+gap:1rem !important;
+align-items:center !important;
 }
 
 }
