@@ -607,68 +607,8 @@
     </div>
 </footer> 
 
-<!-- Chatbot HTML -->
-<div id="chatbot">
-    <div id="chat-header">Chat with gogbot!</div>
-    <div id="chat-body"></div>
-    <input type="text" id="chat-input" style="color: rgb(243, 4, 4);"placeholder="Type a message..." />
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("Chatbot script loaded!"); // Debugging
-
-    const chatHeader = document.getElementById("chat-header");
-    const chatBody = document.getElementById("chat-body");
-    const chatInput = document.getElementById("chat-input");
-
-    if (!chatHeader || !chatBody || !chatInput) {
-        console.error("Chatbot elements not found! Check your HTML structure.");
-        return;
-    }
-
-    chatHeader.addEventListener("click", function () {
-        if (chatBody.style.display === "none") {
-            chatBody.style.display = "block";
-            chatInput.style.display = "block";
-        } else {
-            chatBody.style.display = "none";
-            chatInput.style.display = "none";
-        }
-    });
-
-    chatInput.addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
-            let input = this.value.trim();
-            if (input) {
-                chatBody.innerHTML += `<div><strong>You:</strong> ${input}</div>`;
-
-                // Handle bot responses
-                let botReply = generateBotResponse(input);
-                chatBody.innerHTML += `<div style="color: black;"><strong>Bot:</strong> ${botReply}</div>`;
 
 
-                this.value = "";
-                chatBody.scrollTop = chatBody.scrollHeight;
-            }
-        }
-    });
-
-    function generateBotResponse(input) {
-        input = input.toLowerCase();
-
-        if (input.includes("hello") || input.includes("hi")) {
-            return "Hello! How can I assist you today?";
-        }
-        if (input.includes("services")) {
-            return "George offers web development, chatbot creation, automation, and more!";
-        }
-        if (input.includes("contact") || input.includes("phone") || input.includes("number") || input.includes("email")) {
-            return `<br>📞 Contact Number: <strong>+254710823964</strong><br>📧 Email: <strong>ndungugeorge065@gmail.com</strong>`;
-        }
-        return "I'm still learning! Ask me about Georges tech services or how to contact him.";
-    }
-});
-</script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
