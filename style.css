@@ -1104,6 +1104,39 @@ input[type='checkbox'] {
         grid-template-columns: 1fr;
         text-align: center;
     }
+
+/* --- TARGETING SMALL MOBILE DEVICES (500px and below) --- */
+@media screen and (max-width: 500px) {
+    
+    /* 1. Center the Home Buttons */
+    .home__btns {
+        display: flex !important;
+        flex-direction: row !important; /* Keep side-by-side */
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 15px !important;
+        margin-top: 2rem !important; /* Adds space above the buttons if needed */
+    }
+
+    /* 2. Center and Lift the About Image */
+    .about__img-wrapper {
+        display: flex !important;
+        justify-content: center !important;
+        margin-top: -60px !important; /* Pulls image up further on small screens */
+        margin-bottom: 30px !important; /* Space between image and text */
+        width: 100% !important;
+    }
+
+    /* 3. Ensure the Image inside centers perfectly */
+    .about__img-wrapper img {
+        margin: 0 auto !important;
+        display: block !important;
+        width: 250px !important; /* Or whatever size looks best on your phone */
+        height: auto !important;
+    }
+}
+    
     
     .home__btns {
         display: flex;
