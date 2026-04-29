@@ -1003,130 +1003,115 @@ input[type='checkbox'] {
     }
 }
 
-/* ======= Mobile Styles (Between 576px and 767px) ======= */
-@media screen and (max-width: 767px) {
-    .container {
-        width: 95%;
-    }
+/* =========================================
+   FULL MOBILE FIX
+   Works on 768px, 576px and smaller
+   Paste at VERY END of style.css
+========================================= */
 
-    .nav__toggle {
-        display: block;
-        font-size: 2rem;
-        position: absolute;
-        right: 20px;
-        top: 15px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: var(--first-color);
-    }
+/* ---------- TABLET + MOBILE ---------- */
+@media screen and (max-width:768px){
 
-    /* Navigation for Small Screens */
-    .nav__list {
-        display: none;
-    }
-
-    .nav__list.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: var(--container-color);
-        width: 100%;
-        text-align: center;
-        padding: 1rem 0;
-        z-index: 1000;
-    }
-
-    /* Home Section */
-    .home__title {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .home__description {
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    .home__btns {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Adjust About Section */
-    .about__img-wrapper {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 11rem;
-    }
-
-    .services__container {
-        grid-template-columns: 1fr;
-    }
-
-    .work__container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.5rem;
-    }
-
-    .work__card {
-        width: 90%;
-    }
-
-    .form__group {
-        grid-template-columns: 1fr;
-    }
-
-    .footer__container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-}
-
-@media screen and (max-width:576px){
-
-.home__container,
-.about__container{
-grid-template-columns:1fr !important;
-width:100% !important;
-text-align:center !important;
-justify-items:center !important;
+/* HOME */
+.home__container{
+    grid-template-columns:1fr !important;
+    justify-items:center !important;
+    text-align:center !important;
+    row-gap:2rem !important;
 }
 
 .home__content{
-text-align:center;
+    text-align:center !important;
+    width:100% !important;
 }
 
 .home__btns{
-display:flex !important;
-justify-content:center !important;
-align-items:center !important;
-flex-wrap:wrap !important;
-gap:12px !important;
-width:100% !important;
+    display:flex !important;
+    flex-direction:row !important;
+    justify-content:center !important;
+    align-items:center !important;
+    flex-wrap:wrap !important;
+    gap:12px !important;
+    width:100% !important;
+    margin-top:1rem !important;
 }
 
-.home__img{
-width:100% !important;
-max-width:280px !important;
-height:auto !important;
+.home__btns .btn{
+    margin:0 !important;
+}
+
+/* ABOUT */
+.about__container{
+    grid-template-columns:1fr !important;
+    justify-items:center !important;
+    text-align:center !important;
+    row-gap:1rem !important;
 }
 
 .about__img-wrapper{
-width:260px !important;
-height:260px !important;
-margin:0 auto 2rem auto !important;
+    position:relative !important;
+    width:260px !important;
+    height:260px !important;
+    margin:0 auto 1rem auto !important;
+    top:0 !important;
+    left:0 !important;
+}
+
+.about__img{
+    width:100% !important;
+    height:auto !important;
+}
+
+.about__content,
+.about__description,
+.about__data{
+    margin-top:0 !important;
 }
 
 .about__bottom{
-flex-direction:column !important;
-gap:1rem !important;
-align-items:center !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    gap:1rem !important;
+}
+
+}
+
+/* ---------- SMALL PHONES ---------- */
+@media screen and (max-width:576px){
+
+.home__title{
+    font-size:2rem !important;
+}
+
+.home__btns{
+    flex-direction:column !important;
+    gap:10px !important;
+}
+
+.home__btns .btn{
+    width:220px !important;
+    text-align:center !important;
+}
+
+.home__img{
+    max-width:260px !important;
+}
+
+/* ABOUT IMAGE SMALLER */
+.about__img-wrapper{
+    width:220px !important;
+    height:220px !important;
+    margin:0 auto 1rem auto !important;
+}
+
+.about__img{
+    width:100% !important;
+}
+
+/* BETTER TEXT SPACING */
+.about__description{
+    padding-inline:10px !important;
 }
 
 }
