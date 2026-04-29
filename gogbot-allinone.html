@@ -299,8 +299,8 @@ const GOG_QRS = {
   default : ["What services do you offer?",  "How do I contact George?",  "Tell me about the POS"],
   pricing : ["Get a free WhatsApp quote",     "What affects the price?",   "What is included?"],
   pos     : ["Does it work offline?",         "Can it use M-Pesa?",        "How much does it cost?"],
-  mpesa   : ["How long does it take?",        "What does it cost?",        "Get started 🚀"],
-  hire    : ["Chat on WhatsApp 💬",           "Send an email 📧",          "What services do you offer?"],
+  mpesa   : ["How long does it take?",        "What does it cost?",        "Get started "],
+  hire    : ["Chat on WhatsApp 💬",           "Send an email ",          "What services do you offer?"],
   web     : ["Do you do eCommerce?",          "How long does it take?",    "Can you redesign my site?"],
 };
 
@@ -408,12 +408,12 @@ function gogLeadForm() {
   av.className = 'gog-av'; av.textContent = '🤖';
   const bub = document.createElement('div');
   bub.className = 'gog-bub';
-  bub.innerHTML = `Interested? Leave your details and George will reach out 👇
+  bub.innerHTML = `Interested? Leave your details and George will reach out 
     <div class="gog-lead" style="margin-top:9px;">
       <p>Get a free callback from George</p>
       <input id="gog-name"    type="text" placeholder="Your name"/>
       <input id="gog-contact" type="text" placeholder="Phone or email"/>
-      <button onclick="gogSubmit()">Send to George 🚀</button>
+      <button onclick="gogSubmit()">Send to George </button>
     </div>
     <div class="gog-ts">${gogNow()}</div>`;
   row.appendChild(av); row.appendChild(bub);
@@ -429,7 +429,7 @@ function gogSubmit() {
   const msg = encodeURIComponent(`Hello George! I'm ${name}. Found you via your website chatbot. Contact: ${contact}. Interested in your services.`);
   window.open('https://wa.me/254710823964?text=' + msg, '_blank');
   document.querySelectorAll('.gog-lead').forEach(el => el.closest('.gog-row')?.remove());
-  gogAddMsg(`✅ Thanks **${name}**! WhatsApp opened with your details. George will be in touch! 😊`, 'bot');
+  gogAddMsg(`Thanks **${name}**! WhatsApp opened with your details. George will be in touch! `, 'bot');
 }
 
 function gogShowTyping() {
@@ -452,7 +452,7 @@ async function gogCallModel(model, messages) {
     method : 'POST',
     headers: {
       'Content-Type' : 'application/json',
-      'Authorization': 'Bearer ' + GOG_KEY,
+      'Authorization': 'Bearer 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',
       'HTTP-Referer' : 'https://georges-lab.github.io',
       'X-Title'      : 'GogBot'
     },
