@@ -1062,63 +1062,8 @@
 
 </div>
 
-</footer> <!-- ═══════════════════════════════════════════════════  
-     GOGBOT WIDGET — gogbot-snippet.html  
-     georges-lab.github.io  
-  
-     HOW TO ADD THIS TO YOUR SITE:  
-     ─────────────────────────────  
-     1. Upload gogbot.css, gogbot.js to your repo  
-  
-     2. Inside your <head> tag, add:  
-        <link rel="stylesheet" href="gogbot.css"/>  
-  
-     3. Copy everything below and paste it just  
-        before your closing </body> tag.  
-        The <script> tag is already included.  
-     ═══════════════════════════════════════════════════ -->  <!-- ── Floating Toggle Button ── -->  <button id="gogbot-toggle" onclick="gbToggle()" title="Chat with GogBot">  
-  <div class="notif-badge" id="gbBadge">1</div>  
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="none">  
-    <path  
-      d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"  
-      stroke="white"  
-      stroke-width="2"  
-      stroke-linecap="round"  
-      stroke-linejoin="round"  
-    />  
-  </svg>  
-</button>  <!-- ── Chat Window ── -->  <div id="gogbot-window">    <!-- Header -->    <div class="gb-header">  
-    <div class="gb-av">🤖</div>  
-    <div class="gb-hinfo">  
-      <div class="gb-hname">GogBot · George's Assistant</div>  
-      <div class="gb-hsub">  
-        <div class="gb-dot"></div>  
-        Online · Instant replies  
-      </div>  
-    </div>  
-    <button class="gb-hclose" onclick="gbToggle()">×</button>  
-  </div>    <!-- Topic Chips -->    <div class="gb-chips" id="gbChips">  
-    <button class="gb-chip" onclick="gbChipSend('What services does George offer?')">Services</button>  
-    <button class="gb-chip" onclick="gbChipSend('How much does a website cost?')">Pricing </button>  
-    <button class="gb-chip" onclick="gbChipSend('Tell me about George\'s POS system')">POS System </button>  
-    <button class="gb-chip" onclick="gbChipSend('How does M-Pesa integration work?')">M-Pesa </button>  
-    <button class="gb-chip" onclick="gbChipSend('I want to hire George')">Hire George </button>  
-  </div>    <!-- Messages -->    <div class="gb-msgs" id="gbMsgs"></div>    <!-- Input Area -->    <div class="gb-inputarea">  
-    <div class="gb-inwrap">  
-      <textarea id="gbInput" rows="1" placeholder="Ask me anything…"></textarea>  
-    </div>  
-    <button class="gb-sendbtn" onclick="gbSend()">  
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">  
-        <path  
-          d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13"  
-          stroke="white"  
-          stroke-width="2.5"  
-          stroke-linecap="round"  
-          stroke-linejoin="round"  
-        />  
-      </svg>  
-    </button>  
-  </div>  </div>  <!-- ── GogBot Script ── -->  <script src="gogbot.js"></script>  <script>
+</footer> 
+<script>
   
     document.addEventListener("DOMContentLoaded", function () {
   
