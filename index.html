@@ -1063,13 +1063,11 @@
 </div>
 
 </footer> 
-
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".nav__toggle");
     const navList = document.querySelector(".nav__list");
     
-    // Safety check to ensure nav toggle element exists on the page
     if (menuToggle && navList) {
         const icon = menuToggle.querySelector("i");
         
@@ -1079,10 +1077,10 @@ document.addEventListener("DOMContentLoaded", function () {
             if (icon) {
                 if (navList.classList.contains("active")) {
                     icon.classList.remove("fa-bars");
-                    icon.classList.add("fa-xmark"); // Transform to close icon
+                    icon.classList.add("fa-xmark");
                 } else {
                     icon.classList.remove("fa-xmark");
-                    icon.classList.add("fa-bars"); // Transform back to hamburger icon
+                    icon.classList.add("fa-bars");
                 }
             }
         });
@@ -1090,11 +1088,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 <script>
-    AOS.init({
-        duration: 1000,
-        once: true
+    // Wait for the deferred script assets to fully register before initializing
+    window.addEventListener('load', function() {
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+        }
     });
 </script>
 
@@ -1103,7 +1106,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    // Note: Replace 'G-XXXXXXXXXX' with your actual tracking ID from your Google Analytics panel
     gtag('config', 'G-XXXXXXXXXX');
 </script>
 
@@ -1116,13 +1118,20 @@ document.addEventListener("DOMContentLoaded", function () {
           url: 'https://general-runtime.voiceflow.com',
           voice: {
             url: "https://runtime-api.voiceflow.com"
+          },
+          // Passing user configuration metadata parameters directly to the AI Agent state
+          user: {
+            name: "George"
           }
         });
       }
+      // Added defer parameter to prevent blocking your core portfolio page rendering
       v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
-      v.type = "text/javascript"; 
+      v.type = "text/javascript";
+      v.defer = true;
       s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
+
 </body>
 </html>
